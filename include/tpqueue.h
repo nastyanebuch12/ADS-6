@@ -1,6 +1,8 @@
 // Copyright 2022 NNTU-CS
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
+#pragma once
+#include <stdexcept>
 
 template<typename T>
 class TPQueue {
@@ -43,7 +45,7 @@ class TPQueue {
 
   T pop() {
     if (!head) {
-      throw std::runtime_error("Очередь пуста!");
+      throw std::runtime_error("Empty!");
     }
     Item* temp = head;
     T result = temp->data;
