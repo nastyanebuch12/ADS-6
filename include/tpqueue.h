@@ -7,10 +7,10 @@
 template<typename T>
 class TPQueue {
  private:
-  struct Item {
-   T data;
-   Item *next;
-   explicit Item(T data) : data(data), next(nullptr) {}
+  struct Node {
+  T data;
+  Item *next;
+  explicit Item(T data) : data(data), next(nullptr) {}
   };
   Item *head, *tail;
 
